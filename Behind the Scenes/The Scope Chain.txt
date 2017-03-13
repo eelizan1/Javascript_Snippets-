@@ -1,0 +1,16 @@
+The Scope Chain 
+
+function b() {
+	console.log(myVar); // outputs 1 from the global 
+						// it references to the outer environment which is the LEXICAL environment 
+}						// function b() is NOT in a(), its in the global still 						
+
+function a() {
+	var myVar = 2; 
+	b(); 
+}
+
+var myVar = 1; 
+a(); 
+
+

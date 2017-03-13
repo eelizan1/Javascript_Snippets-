@@ -1,0 +1,31 @@
+Four ways of invoking functions 
+
+1. Functions
+2. Methods
+3. Constructors
+4. Call and Apply methods 
+
+Extra Parameters: 
+
+- Receive arguments & this
+- Invoking stops current execution 
+- plus(a, b)
+- Traditinoal invocation
+- this parameter would be bound to the global object 
+
+function(a, b) {
+	// return is also a function 
+	return (
+		console.log(a + b); // result of operation
+		console.log(this);  // outputs global 
+		console.log(arguments); // outputs what you put in the parameters 
+	
+	)
+
+}
+ 
+plus(2, 2)
+
+// 4
+// window object 
+// [2, 2]

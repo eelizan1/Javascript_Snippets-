@@ -1,0 +1,22 @@
+Function, Context, and Variable Environments 
+
+variable environment - where they live and how they relate to each other in memory
+
+ex. 
+
+	function b() {
+		var myVar; 
+	}
+	
+	function a() {
+		var myVar = 2; 
+		b(); 
+	}
+	
+	var myVar = 1; 
+	a(); 
+	
+	Output: 
+			1
+			2
+			undefined 

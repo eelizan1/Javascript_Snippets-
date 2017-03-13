@@ -1,0 +1,48 @@
+
+function plus(a, b) {
+	// a and b are only local to the function 
+	
+	var sum = a + b; 
+	
+	return sum; 
+}
+
+Javascript functions can also return other objects and functions 
+
+console.log(plus(4, 5)); // returns 9 
+
+////////////////////////////////////////////////
+
+Traditioanl Declaration 
+
+function plus(a, b) {
+	return ('a+b'); 
+}
+
+plus(2, 3); 
+
+///////////////////////////////////////////////
+
+Defintion Expression
+
+var plus = function(a,b) {
+	return console.log(a+b); 
+};  
+
+plus(2, 4); 
+
+- Assigning functions to expressions 
+- AKA anonymous function - not bound to an identifier 
+- Can use for patterns like recursion 
+- More flexible than expressions
+
+
+- You can invoke immediately:  
+
+var plus = function(a, b) {
+	return conole.log(a+b); 
+}(3, 4); 
+
+// uses (); right after to invoke immediately
+
+- Great for needing for just one time 

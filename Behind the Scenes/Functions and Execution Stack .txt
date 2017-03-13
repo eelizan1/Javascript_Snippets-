@@ -1,0 +1,61 @@
+
+*****************************************************************
+Single Threaded Synchronous Execution
+
+Single Threaded: One command at a time 
+js behaves in a single threaded manner 
+
+Synchronous: One ine of code being executed one line at a time 
+in the order it appears 
+****************************************************************
+
+
+Function Innovation and the Execution Stack 
+
+In js we use () to invoke an function 
+
+ex.
+
+		function b() {
+
+		}
+		function a() {
+		 b(); // invoked within the execution context of a 
+		}
+
+		a(); // invoked first creating a new execution context 
+		
+	Global Execution Context is created first	
+	
+	Functions are then put into memory and the code is exectued line by line
+	Compiler hits a(); first and creates a NEW execution context creating an execution stack 
+	The top of the stack gets executed first 
+	
+	** Every time you invoke a function in javascript a NEW execution context is created just like the GLOBAL Execution context**
+	
+	order of stack: Global, a(), b()
+	
+	When b() finished, itll get popped off the stack and the rest of a() will execute and so on
+	
+ex. 
+
+		function a() {
+			b(); 
+			var c; 
+		}
+		
+		function b() {
+			var d; 
+		}
+		
+		a(); 
+		var d; 
+		
+		order: a() --> b() --> var d --> var c --> var d
+	
+	
+	
+	
+	
+	
+	

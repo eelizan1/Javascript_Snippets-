@@ -1,0 +1,10 @@
+let - can declare a variable and use block scoping 
+
+if (a > b) {
+
+	let c = true; 
+
+}
+
+c is only availabe inside that block like a for loop 
+In a for loop, you'll get different values of c in memory 

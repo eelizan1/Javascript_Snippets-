@@ -1,0 +1,43 @@
+var a = 'Hello World!'; 
+
+function b() {
+	console.log('Called by b'); 
+}
+
+b(); //called by b! 
+console.log(a); //hello world
+
+********************************************
+
+b(); 
+console.log(a); 
+
+var a = 'Hello World!'; 
+
+function b() {
+	console.log('Called by b'); 
+}
+
+Still valid code
+Output: 
+	Called b! 
+	undefined 
+
+**Called Hoisting
+
+WHY: 
+
+The execution context is created in 2 phases: 
+1. Creation Phase
+	- Global Object 
+	- 'this'
+	- Outer Environment 
+	- ** Setups memory space for variables and functions "Hoisting" ** 
+			Before code begins to be executed line by line
+			The js engine sets up space for var and functions first so they exist 
+			But with variables only the name is stored as placeholder because the code 
+			has not been executed line by line to recognize the value of 'a'
+			
+			
+2. Execution Phase 
+	- Runs your code line by line 

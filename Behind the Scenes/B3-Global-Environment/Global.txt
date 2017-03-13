@@ -1,0 +1,26 @@
+Execution Context (Global)
+
+- Accessible to anything and everywhere in the code 
+- Creates two things by the JS engine: 
+	1. Global Object 
+	2. 'this'
+	3. Your code
+	4. Outer Environment
+	
+	Therefore you can use these 
+	
+	"this" --> window : window is the value (object)
+	window is the global object in the browser 
+	** there will always be a global object
+
+var a = "hello, world"; 
+
+function b() {
+
+}
+
+**When you create variables and functions outside a function, 
+  they become attached to the global object 
+
+window.a; // hello, world
+window.b;   

@@ -1,0 +1,91 @@
+Object example: 
+
+var info = {
+
+	// properties - separated by name value pair 
+	full_name : "Enrico Elizan", 
+	title: "Student", 
+	
+	// an array with objects  
+	link : [
+		// obejcts of link array 
+		{blog : "www.blog.com"}, 
+		{website: "www.website.com}
+	]
+};
+
+**********************************************************
+
+Functions as objects 
+
+var calc = {
+	status: 'Awesome', 
+	plus: function (a, b) {
+		return (
+			console.log(this),
+			console.log(a+b),
+			console.log(arguments), 
+			console.log(this.status)	
+		)
+	}
+
+}
+
+calc.plus(2,2); // object calling its method 
+
+console.log(this) : returns object with it's values 
+console.log(a+b) : 4
+console.log(arguments) :  [2,2]
+console.log(this.status) : 	awesome 
+
+
+the 'this' attribute gets the value of the object. 
+It points to the object that the function is in 
+this object . status which is awesome 
+
+**********************************************************
+
+Creating an Object with constructors: new Object
+
+// essentially dog is an object created with the instance of the function 
+var Dog = function() {
+	var name, breed;  
+	return console.log(this); 
+}
+
+// new copy of object 
+firstDog = new Dog; 
+
+firstDog.name = "Rover"; 
+firstDog.breed = "malamute"; 
+
+console.log(firstDog);
+
+// each instance can have its own set of properties 
+
+secondDog = new Dog; 
+secondDog.name = "Red"; 
+secondDog.breed = "poodle"; 
+
+// Using this
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

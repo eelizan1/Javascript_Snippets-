@@ -1,0 +1,43 @@
+Javascript Control Flow
+
+*************************************
+Boolean Logic 
+
+*dont use ==
+use ===
+
+************************************
+
+Conditional Excercises:
+
+// if age is even 
+
+if(age % 2 === 0)
+
+// if age is a perfect square 
+
+if (age % Math.sqrt (age) === 0)
+
+if age is 9: 
+	9 % Math.sqrt(9) == 0
+	9 % 3 === 0
+		true 
+		
+*********************************
+
+Simple Guessing Game
+
+while(true) {
+
+var number = 7; 
+var userNumber = prompt("What is your guess?"); 
+
+if (Number(userNumber) === number {
+	alert("correct"); 
+	break; 
+	} else {
+	alert("incorrecet, try again"); 
+	}
+	
+}
+	

@@ -1,0 +1,31 @@
+1. isEven()
+
+2. factorial() 
+// takes a number and returns the factorial given 
+// 0! is 1 
+
+function factorial(a){
+	if (a ===  0)
+		return 1; 
+	else 
+		return factorial(a - 1) * a; 
+}
+
+3. kebabToSnake() 
+// write a function which takes a single string argument and replace '-' with '_'
+
+function snake(a) {
+	var i; 
+	for(i = 0; i < a.length; i++) {
+		if(!a.includes === "-") {
+			console.log("doesnt contain - "); 
+			break; 
+		}	
+		else 
+		a = a.replace("-", "_"); 
+	}
+	
+	return a; 
+}
+
+console.log("hello"); 
