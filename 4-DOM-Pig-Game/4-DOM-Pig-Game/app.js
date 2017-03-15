@@ -10,7 +10,7 @@ GAME RULES:
 */
 
 // variable declarations 
-var scores, roundScore, activePlayer, dice;
+var scores, roundScore, activePlayer;
 
 scores = [0, 0];
 roundScore = 0;
@@ -19,12 +19,12 @@ roundScore = 0;
 // using this style to access scores array 
 // 0 = player 1
 // 1 = player 2
-activePlayer = 0;
+activePlayer = 1;
 
 // get random dice values that are integers 
 // Math.floor - to get rid of decimals 
 // (Math.random() * 6) + 1 - get number between 1 and 6 
-dice = Math.floor(Math.random() * 6) + 1;
+//dice = Math.floor(Math.random() * 6) + 1;
 
 // perform DOM manipulation 
 // the document object will give you access to the DOM
@@ -37,15 +37,15 @@ dice = Math.floor(Math.random() * 6) + 1;
 
 // innerHTML - to use html elements when doing js manipulation 
 // put html elements in '' to distinguish 
-document.querySelector('#current-' + activePayer).innerHTML = '<b>' + dice + '</>'
+//document.querySelector('#current-' + activePayer).innerHTML = '<b>' + dice + '</>'
 
 // read and store an element with an idea and store in a variable 
-var x = document.querySelector('#score-0').textContent;
+//var x = document.querySelector('#score-0').textContent;
 
 // To manipulate the CSS of an element
 // Hide the dice element in beginning of the game - display to none 
 // .style.display = none - style, css property, then css value 
-document.querySelector('.dice').style.display = none;
+document.querySelector('.dice').style.display = 'block';
 
 
 /********************************************************************************************
@@ -71,15 +71,28 @@ Event Handling - Roll the Dice
 // Ananymou function - a function with no name
 // Can't use ananymous functions outside this scope
 
+document.getElementById('score-0').textContent = '0';
+document.getElementById('score-1').textContent = '0';
+document.getElementById('current-0').textContent = '0';
+document.getElementById('current-1').textContent = '0';
+
 
 document.querySelector('.btn-roll').addEventListener('click', function () {
 
-// 1. Random Number 
+    //    Note this variables are only within the scope of this function
+
+    // 1. Random Number 
     // get random dice values that are integers 
-// Math.floor - to get rid of decimals 
-// (Math.random() * 6) + 1 - get number between 1 and 6 
-dice = Math.floor(Math.random() * 6) + 1;
-    
-//    2. Display result
+    // Math.floor - to get rid of decimals 
+    // (Math.random() * 6) + 1 - get number between 1 and 6 
+    var dice = Math.floor(Math.random() * 6) + 1;
+
+    // 2. Display result
+    var diceDom = document.querySelector('.dice');
+    diceDom.style.display = 'block';
+
+    // change the image of the dice 
+    diceDom.src = 'dice-' + dice + '.png';
+
 
 });
