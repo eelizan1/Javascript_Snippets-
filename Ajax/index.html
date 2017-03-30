@@ -1,0 +1,58 @@
+<!--must run live server in project folder-->
+<!--PORT: http://127.0.0.1:8080/-->
+
+<html>
+
+<head>
+    <title>JQuery</title>
+</head>
+<style>
+    body {
+        font-size: 17px;
+        font-family: arial;
+        background: #f4f4f4;
+        line-height: 1.5em;
+    }
+    
+    header {
+        background: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 4px #000 solid;
+        margin-botto: 10px;
+    }
+    
+    #container {
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+    }
+    
+    <span style="text-decoration:underline;"></span>
+</style>
+
+<body>
+    <header>
+        <h1>JQuery and Ajax Crash Course</h1>
+    </header>
+    <div id="container">
+        <div id="result"></div>
+        <ul id="users"></ul>
+        <!--        form action the json url-->
+        <form id="postForm" action="http://jsonplaceholder.typicode.com/posts">
+            <h3>Add Post</h3>
+            <input type="text" id="title" placeholder="Title">
+            <br>
+            <textarea placeholder="body" id="body"></textarea>
+            <br>
+            <input type="submit" valeu="submit">
+        </form>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
